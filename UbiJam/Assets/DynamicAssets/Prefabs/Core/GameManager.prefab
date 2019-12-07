@@ -177,4 +177,5 @@ MonoBehaviour:
   shadowDistance: 1.5
   planetRepelForce: 0.2
   planetAttractForce: 0.001
-  dieParticles: {fileID: 0}
+  dieParticles: {fileID: 3593546554289422232, guid: 58fa4d74ed2504b5c9259649ce15f518,
+    type: 3}
