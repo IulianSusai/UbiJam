@@ -20,6 +20,10 @@ public class GameManager : MonoBehaviour
     private int currentIndex;
     [SerializeField] private CameraShake camShake;
 
+    [Header("Shadow")]
+    public GameObject shadowPref;
+    public float shadowDistance = 1f;
+
     [Header("Design")]
     public float planetRepelForce;
     public float planetAttractForce;
