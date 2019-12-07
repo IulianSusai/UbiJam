@@ -13,7 +13,8 @@ public class GameOverPage : UIPage
     }
 
     public void OnRestartButton() {
-        UIManager.Instance.OpenInGamePage();
+		AudioManager.Instance.PlayTapSound();
+		UIManager.Instance.OpenInGamePage();
         GameManager.Instance.LoadLevel();
     }
 }

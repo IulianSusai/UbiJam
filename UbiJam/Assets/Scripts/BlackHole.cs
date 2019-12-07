@@ -6,11 +6,13 @@ public class BlackHole : MonoBehaviour
 {
 
     private void OnMouseDown() {
+		AudioManager.Instance.PlayBlackHoleSound();
         ActionsController.Instance.SendOnTap(this);
     }
 
     private void OnMouseUp() {
-        ActionsController.Instance.SendOnEndTap();
+		AudioManager.Instance.StopBlackHoleSound();
+		ActionsController.Instance.SendOnEndTap();
     }
 
     private void OnMouseDrag() {

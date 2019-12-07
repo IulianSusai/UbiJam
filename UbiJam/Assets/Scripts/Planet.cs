@@ -40,15 +40,19 @@ public class Planet : MonoBehaviour
     }
 
     private void OnTap(BlackHole _hole) {
-        line.gameObject.SetActive(true);
-        line.SetPosition(0, transform.position);
-        line.SetPosition(1, _hole.transform.position);
+		if (!rb.isKinematic) {
+			line.gameObject.SetActive(true);
+			line.SetPosition(0, transform.position);
+			line.SetPosition(1, _hole.transform.position);
+		}
     }
 
     private void OnHold(BlackHole _hole) {
-	 	Vector3 moveDir = _hole.transform.position - transform.position;
-		rb.velocity += new Vector2( moveDir.x ,moveDir.y).normalized * GameManager.Instance.planetRepelForce;
-        SetLine(_hole.transform.position);
+		if (!rb.isKinematic) {
+			Vector3 moveDir = _hole.transform.position - transform.position;
+			rb.velocity += new Vector2(moveDir.x, moveDir.y).normalized * GameManager.Instance.planetRepelForce;
+			SetLine(_hole.transform.position);
+		}
 	}
 
     private void SetLine(Vector3 endPos) {
@@ -68,10 +72,12 @@ public class Planet : MonoBehaviour
             } else
             {
                 GameManager.Instance.ShakeCamera();
+				rb.velocity = Vector2.zero;
                 rb.isKinematic = true;
                 visual.Die();
                 line.gameObject.SetActive(false);
                 trail.gameObject.SetActive(false);
+				AudioManager.Instance.PlayDieSound();
                 Invoke("OnDie", 1f);
             }
 

@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
             Destroy(currentLevel);
         }
         currentLevel = Instantiate(levels[currentIndex % levels.Count]);
+		AudioManager.Instance.StopBlackHoleSound();
     }
     public void LoadNextLevel() {
         currentIndex++;
