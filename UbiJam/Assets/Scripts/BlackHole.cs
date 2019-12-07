@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BlackHole : MonoBehaviour
 {
+
     private void OnMouseDown() {
         ActionsController.Instance.SendOnTap(this);
     }
