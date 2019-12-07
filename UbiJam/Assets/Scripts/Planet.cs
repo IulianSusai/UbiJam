@@ -53,4 +53,10 @@ public class Planet : MonoBehaviour
 		//rb.MovePosition(rb.position + dir * currentDir * force * Time.fixedDeltaTime);
 	}
 
+	private void OnCollisionEnter2D(Collision2D collision) {
+		if (collision.gameObject.CompareTag("BlackHole") || collision.gameObject.CompareTag("Obstacle")) {
+			GameManager.Instance.LoadLevel();
+		}
+	}
+
 }
