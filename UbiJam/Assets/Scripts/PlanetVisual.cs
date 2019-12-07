@@ -28,7 +28,7 @@ public class PlanetVisual : MonoBehaviour
 
     public void Die() {
         gameObject.SetActive(false);
-        Instantiate(GameManager.Instance.dieParticles, transform.position, Quaternion.identity, null);
+        //Instantiate(GameManager.Instance.dieParticles, transform.position, Quaternion.identity, null);
     }
 
 }
