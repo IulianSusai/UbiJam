@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     [Header("Design")]
     public float planetRepelForce;
     public float planetAttractForce;
+    public ParticleSystem dieParticles;
 
     private void Start() {
         currentIndex = 0;
