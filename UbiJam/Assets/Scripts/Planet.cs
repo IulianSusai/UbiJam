@@ -5,6 +5,8 @@ using UnityEngine;
 public class Planet : MonoBehaviour
 {
     [SerializeField] private PlanetVisual visual;
+    [SerializeField] private LineRenderer line;
+    [SerializeField] private TrailRenderer trail;
 	[SerializeField] private Rigidbody2D rb;
     [SerializeField] private bool restartPositionObHit = false;
     [SerializeField] private Vector3 initialVelocity = Vector3.zero; 
@@ -20,12 +22,16 @@ public class Planet : MonoBehaviour
     }
 
     private void Start() {
+        ActionsController.Instance.onTap += OnTap;
 		ActionsController.Instance.onHold += OnHold;
+        ActionsController.Instance.onEndTap += OnEndTap;
 	}
 
 	private void OnDestroy() {
-		ActionsController.Instance.onHold -= OnHold;
-	}
+        ActionsController.Instance.onTap -= OnTap;
+        ActionsController.Instance.onHold -= OnHold;
+        ActionsController.Instance.onEndTap -= OnEndTap;
+    }
 
     void Restart ()
     {
@@ -33,10 +39,27 @@ public class Planet : MonoBehaviour
         rb.velocity = initialVelocity;
     }
 
-	private void OnHold(BlackHole _hole) {
+    private void OnTap(BlackHole _hole) {
+        line.gameObject.SetActive(true);
+        line.SetPosition(0, transform.position);
+        line.SetPosition(1, _hole.transform.position);
+    }
+
+    private void OnHold(BlackHole _hole) {
 	 	Vector3 moveDir = _hole.transform.position - transform.position;
 		rb.velocity += new Vector2( moveDir.x ,moveDir.y).normalized * GameManager.Instance.planetRepelForce;
+        SetLine(_hole.transform.position);
 	}
+
+    private void SetLine(Vector3 endPos) {
+        Debug.LogError("END POS: " + endPos);
+        line.SetPosition(0, transform.position);
+        line.SetPosition(1, endPos);
+    }
+
+    private void OnEndTap() {
+        line.gameObject.SetActive(false);
+    }
 
 	private void OnCollisionEnter2D(Collision2D collision) {
 		if (collision.gameObject.CompareTag("BlackHole") || collision.gameObject.CompareTag("Obstacle")) {
@@ -47,6 +70,8 @@ public class Planet : MonoBehaviour
                 GameManager.Instance.ShakeCamera();
                 rb.isKinematic = true;
                 visual.Die();
+                line.gameObject.SetActive(false);
+                trail.gameObject.SetActive(false);
                 Invoke("OnDie", 1f);
             }
 
@@ -54,7 +79,7 @@ public class Planet : MonoBehaviour
 	}
 
     private void OnDie() {
-        GameManager.Instance.LoadLevel();
+        UIManager.Instance.OpenGameOverPage();
     }
 
 }

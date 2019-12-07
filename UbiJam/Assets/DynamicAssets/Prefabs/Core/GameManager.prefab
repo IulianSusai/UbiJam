@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 577446395}
   - component: {fileID: 577446394}
   - component: {fileID: 577446397}
+  - component: {fileID: 321625355}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -60,7 +61,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 10.093458
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -100,6 +101,20 @@ MonoBehaviour:
   shakeDuration: 0.1
   shakeAmount: 0.3
   decreaseFactor: 1
+--- !u!114 &321625355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577446393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110c450180f711c44846da743ee5c051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 107
+  horizontalResolution: 1920
 --- !u!1 &8077489427187533856
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,11 +160,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels:
-  - {fileID: 8510222171831588337, guid: 313c5421b670c7f48967f09194423a70, type: 3}
-  - {fileID: 2934736688851479746, guid: cfbb7ad8de2b7f5408a6c32e11791b2b, type: 3}
-  - {fileID: 3651016205401905978, guid: e720ca4e1ee8ec541bcad4e2021a9379, type: 3}
-  - {fileID: 3651016205401905978, guid: 16221b86f598d9645b37b81c385bda87, type: 3}
-  - {fileID: 8510222171831588337, guid: 50b465455ff4d6844a1922ee36f04dba, type: 3}
+  - {fileID: 8510222171831588337, guid: 75694cd42cd67f64cb3b547fdb82e17c, type: 3}
+  - {fileID: 8510222171831588337, guid: 7d209145249598943baf3785bf356575, type: 3}
+  - {fileID: 2934736688851479746, guid: 8dd8c472f1acc714eab6356c2129dc7c, type: 3}
+  - {fileID: 2934736688851479746, guid: b6ebc6a8aaa6a1e44b9086d0b0ddaace, type: 3}
+  - {fileID: 3651016205401905978, guid: 7837931a81506534286566ca9e9fd3dc, type: 3}
+  - {fileID: 3651016205401905978, guid: 73e039f9d5485e54aa692b28b43fdbb7, type: 3}
+  - {fileID: 3651016205401905978, guid: 2f99545782a5bdd4fa54da8770d2a349, type: 3}
+  - {fileID: 8510222171831588337, guid: ed675e6173c1a804f85ed29c62c85dd4, type: 3}
+  - {fileID: 8510222171831588337, guid: 2a1b4711394b8ca4d9e19fe91d2e8651, type: 3}
   camShake: {fileID: 577446397}
   shadowPref: {fileID: 3591793843826584732, guid: b37b844dff1894d33aa0b781c9e3e333,
     type: 3}
@@ -158,4 +177,5 @@ MonoBehaviour:
   shadowDistance: 1.5
   planetRepelForce: 0.2
   planetAttractForce: 0.001
-  dieParticles: {fileID: 0}
+  dieParticles: {fileID: 3593546554289422232, guid: 58fa4d74ed2504b5c9259649ce15f518,
+    type: 3}

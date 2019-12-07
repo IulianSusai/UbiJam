@@ -47,6 +47,9 @@ public class GameManager : MonoBehaviour
     }
     public void LoadNextLevel() {
         currentIndex++;
+        if(currentIndex % levels.Count == 0) {
+            UIManager.Instance.OpenMainPage();
+        }
         LoadLevel();
     }
     public void LoadPrevLevel() {
