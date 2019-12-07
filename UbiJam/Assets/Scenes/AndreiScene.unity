@@ -120,89 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &137778402
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 137778405}
-  - component: {fileID: 137778404}
-  - component: {fileID: 137778403}
-  m_Layer: 0
-  m_Name: UICamera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!81 &137778403
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 137778402}
-  m_Enabled: 1
---- !u!20 &137778404
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 137778402}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 4
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 20
-  field of view: 60
-  orthographic: 1
-  orthographic size: 10
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &137778405
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 137778402}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 43.2, y: 1.1252851, z: -1.700598}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &395873042
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,9 +773,9 @@ Canvas:
   m_GameObject: {fileID: 1650043938}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
-  m_Camera: {fileID: 137778404}
-  m_PlaneDistance: 10
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -1155,13 +1072,48 @@ PrefabInstance:
     - target: {fileID: 8077489427187533859, guid: f03020cdbb4f44c47b824ab022933213,
         type: 3}
       propertyPath: levels.Array.size
-      value: 1
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077489427187533859, guid: f03020cdbb4f44c47b824ab022933213,
+        type: 3}
+      propertyPath: levels.Array.data[5]
+      value: 
+      objectReference: {fileID: 8510222171831588337, guid: a58b10e054060364986edfffc0a7a3a8,
+        type: 3}
+    - target: {fileID: 8077489427187533859, guid: f03020cdbb4f44c47b824ab022933213,
+        type: 3}
+      propertyPath: levels.Array.data[6]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8077489427187533859, guid: f03020cdbb4f44c47b824ab022933213,
         type: 3}
       propertyPath: levels.Array.data[0]
       value: 
-      objectReference: {fileID: 6386746675923744452, guid: 12bdbf94a0a16448290e9a1c9ef32d46,
+      objectReference: {fileID: 3651016205401905978, guid: 2f99545782a5bdd4fa54da8770d2a349,
+        type: 3}
+    - target: {fileID: 8077489427187533859, guid: f03020cdbb4f44c47b824ab022933213,
+        type: 3}
+      propertyPath: levels.Array.data[1]
+      value: 
+      objectReference: {fileID: 2934736688851479746, guid: 8dd8c472f1acc714eab6356c2129dc7c,
+        type: 3}
+    - target: {fileID: 8077489427187533859, guid: f03020cdbb4f44c47b824ab022933213,
+        type: 3}
+      propertyPath: levels.Array.data[2]
+      value: 
+      objectReference: {fileID: 2934736688851479746, guid: b6ebc6a8aaa6a1e44b9086d0b0ddaace,
+        type: 3}
+    - target: {fileID: 8077489427187533859, guid: f03020cdbb4f44c47b824ab022933213,
+        type: 3}
+      propertyPath: levels.Array.data[3]
+      value: 
+      objectReference: {fileID: 3651016205401905978, guid: 7837931a81506534286566ca9e9fd3dc,
+        type: 3}
+    - target: {fileID: 8077489427187533859, guid: f03020cdbb4f44c47b824ab022933213,
+        type: 3}
+      propertyPath: levels.Array.data[4]
+      value: 
+      objectReference: {fileID: 3651016205401905978, guid: 73e039f9d5485e54aa692b28b43fdbb7,
         type: 3}
     m_RemovedComponents:
     - {fileID: 90941694, guid: f03020cdbb4f44c47b824ab022933213, type: 3}
