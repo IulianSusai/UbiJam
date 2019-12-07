@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Planet : MonoBehaviour
 {
+    [SerializeField] private PlanetVisual visual;
 	[SerializeField] private Rigidbody2D rb;
     [SerializeField] private bool restartPositionObHit = false;
     [SerializeField] private Vector3 initialVelocity = Vector3.zero; 
@@ -44,6 +45,8 @@ public class Planet : MonoBehaviour
             } else
             {
                 GameManager.Instance.ShakeCamera();
+                rb.isKinematic = true;
+                visual.Die();
                 Invoke("OnDie", 1f);
             }
 
