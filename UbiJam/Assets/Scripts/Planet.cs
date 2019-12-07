@@ -5,14 +5,32 @@ using UnityEngine;
 public class Planet : MonoBehaviour
 {
 	[SerializeField] private Rigidbody2D rb;
+    [SerializeField] private bool restartPositionObHit = false;
+    [SerializeField] private Vector3 initialVelocity = Vector3.zero; 
 
-	private void Start() {
+
+    Vector3 initialPosition;
+
+
+    private void Awake()
+    {
+        initialPosition = transform.position;
+        Restart();
+    }
+
+    private void Start() {
 		ActionsController.Instance.onHold += OnHold;
 	}
 
 	private void OnDestroy() {
 		ActionsController.Instance.onHold -= OnHold;
 	}
+
+    void Restart ()
+    {
+        transform.position = initialPosition;
+        rb.velocity = initialVelocity;
+    }
 
 	private void OnHold(BlackHole _hole) {
 	 	Vector3 moveDir = _hole.transform.position - transform.position;
@@ -21,7 +39,13 @@ public class Planet : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D collision) {
 		if (collision.gameObject.CompareTag("BlackHole") || collision.gameObject.CompareTag("Obstacle")) {
-			GameManager.Instance.LoadLevel();
+            if (restartPositionObHit) {
+                Restart();
+            } else
+            {
+                GameManager.Instance.LoadLevel();
+            }
+
 		}
 	}
 
