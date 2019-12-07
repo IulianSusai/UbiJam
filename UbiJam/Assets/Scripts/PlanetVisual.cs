@@ -25,10 +25,16 @@ public class PlanetVisual : MonoBehaviour
 
     private void Update()
     {
-        if (shadow != null) {
+        SetupShadows();
+        RotateHightlight();
+    }
+
+    private void SetupShadows()
+    {
+        if (shadow != null)
+        {
             shadow.transform.localPosition = transform.position.normalized * transform.position.magnitude * GameManager.Instance.shadowDistance * 0.01f;
         }
-        RotateHightlight();
     }
 
     private void RotateHightlight()
