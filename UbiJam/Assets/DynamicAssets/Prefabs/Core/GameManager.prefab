@@ -60,7 +60,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.76
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -151,5 +151,9 @@ MonoBehaviour:
   - {fileID: 3651016205401905978, guid: 16221b86f598d9645b37b81c385bda87, type: 3}
   - {fileID: 8510222171831588337, guid: 50b465455ff4d6844a1922ee36f04dba, type: 3}
   camShake: {fileID: 577446397}
+  shadowPref: {fileID: 3591793843826584732, guid: b37b844dff1894d33aa0b781c9e3e333,
+    type: 3}
+  shadowDistance: 1.5
   planetRepelForce: 0.2
   planetAttractForce: 0.001
+  dieParticles: {fileID: 0}
