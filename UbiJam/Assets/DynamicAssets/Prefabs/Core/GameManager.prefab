@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8077489427187533858}
   - component: {fileID: 8077489427187533859}
-  - component: {fileID: 90941694}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -51,15 +50,3 @@ MonoBehaviour:
   - {fileID: 2426296767775499013, guid: a62b14c0179a9ab4cbec5e7c5710bbab, type: 3}
   planetRepelForce: 0.2
   planetAttractForce: 0.001
---- !u!114 &90941694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8077489427187533856}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3360ed3dfb2ed3b428bf3c067ebd658a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
