@@ -55,6 +55,11 @@ PrefabInstance:
       propertyPath: movePoints.Array.data[1]
       value: 
       objectReference: {fileID: 6498850244772817857}
+    - target: {fileID: 4522643806507930996, guid: 831d17146c27b2e4abee6f0b4ff3f531,
+        type: 3}
+      propertyPath: moveDelay
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4574144435213454478, guid: 831d17146c27b2e4abee6f0b4ff3f531,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -217,6 +222,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5846401611775425391}
     m_Modifications:
+    - target: {fileID: 4522643806507930996, guid: 831d17146c27b2e4abee6f0b4ff3f531,
+        type: 3}
+      propertyPath: moveDelay
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4574144435213454478, guid: 831d17146c27b2e4abee6f0b4ff3f531,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -302,6 +312,11 @@ PrefabInstance:
       propertyPath: movePoints.Array.data[1]
       value: 
       objectReference: {fileID: 1075143708522854263}
+    - target: {fileID: 4522643806507930996, guid: 831d17146c27b2e4abee6f0b4ff3f531,
+        type: 3}
+      propertyPath: moveDelay
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4574144435213454478, guid: 831d17146c27b2e4abee6f0b4ff3f531,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -389,6 +404,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5846401611775425391}
     m_Modifications:
+    - target: {fileID: 4522643806507930996, guid: 831d17146c27b2e4abee6f0b4ff3f531,
+        type: 3}
+      propertyPath: moveDelay
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4574144435213454478, guid: 831d17146c27b2e4abee6f0b4ff3f531,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -614,6 +634,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5846401611775425391}
     m_Modifications:
+    - target: {fileID: 4522643806507930996, guid: 831d17146c27b2e4abee6f0b4ff3f531,
+        type: 3}
+      propertyPath: moveDelay
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4574144435213454478, guid: 831d17146c27b2e4abee6f0b4ff3f531,
         type: 3}
       propertyPath: m_LocalPosition.x

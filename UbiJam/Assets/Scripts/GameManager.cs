@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
 
     private GameObject currentLevel;
     private int currentIndex;
+    [SerializeField] private CameraShake camShake;
 
     [Header("Design")]
     public float planetRepelForce;
@@ -26,6 +27,10 @@ public class GameManager : MonoBehaviour
     private void Start() {
         currentIndex = 0;
         LoadLevel();
+    }
+
+    public void ShakeCamera() {
+        camShake.Shake();
     }
 
     public void LoadLevel() {

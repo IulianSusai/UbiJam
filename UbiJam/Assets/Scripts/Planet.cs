@@ -43,10 +43,15 @@ public class Planet : MonoBehaviour
                 Restart();
             } else
             {
-                GameManager.Instance.LoadLevel();
+                GameManager.Instance.ShakeCamera();
+                Invoke("OnDie", 1f);
             }
 
 		}
 	}
+
+    private void OnDie() {
+        GameManager.Instance.LoadLevel();
+    }
 
 }
