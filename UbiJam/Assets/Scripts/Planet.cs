@@ -54,7 +54,7 @@ public class Planet : MonoBehaviour
 	}
 
     private void OnDie() {
-        GameManager.Instance.LoadLevel();
+        UIManager.Instance.OpenGameOverPage();
     }
 
 }
