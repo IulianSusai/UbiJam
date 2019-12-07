@@ -16,7 +16,7 @@ public class MainPage : UIPage
 	public void OnStartButton() {
 		AudioManager.Instance.PlayTapSound();
 		UIManager.Instance.OpenInGamePage();
-		GameManager.Instance.LoadNextLevel();
+		//GameManager.Instance.LoadNextLevel();
 	}
 
 }
