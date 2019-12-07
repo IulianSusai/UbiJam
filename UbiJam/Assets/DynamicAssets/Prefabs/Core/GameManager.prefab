@@ -153,6 +153,8 @@ MonoBehaviour:
   camShake: {fileID: 577446397}
   shadowPref: {fileID: 3591793843826584732, guid: b37b844dff1894d33aa0b781c9e3e333,
     type: 3}
+  planetHightlight: {fileID: 7145293471629214212, guid: 22b101de2fa114b3d85600a173fa7b25,
+    type: 3}
   shadowDistance: 1.5
   planetRepelForce: 0.2
   planetAttractForce: 0.001
