@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Shadow")]
     public GameObject shadowPref;
+    public GameObject planetHightlight;
     public float shadowDistance = 1f;
 
     [Header("Design")]
