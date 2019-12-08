@@ -60,4 +60,10 @@ public class GameManager : MonoBehaviour
         LoadLevel();
     }
 
+    private void Update() {
+        if (Input.GetMouseButtonDown(1)) {
+            LoadNextLevel();
+        }
+    }
+
 }
