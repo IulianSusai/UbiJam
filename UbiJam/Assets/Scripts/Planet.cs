@@ -56,7 +56,6 @@ public class Planet : MonoBehaviour
 	}
 
     private void SetLine(Vector3 endPos) {
-        Debug.LogError("END POS: " + endPos);
         line.SetPosition(0, transform.position);
         line.SetPosition(1, endPos);
     }

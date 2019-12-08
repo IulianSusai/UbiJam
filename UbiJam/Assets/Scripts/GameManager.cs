@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     private int currentIndex;
     [SerializeField] private CameraShake camShake;
 
+    public float blackHoleSpinSpeed = 10;
+    public float blackHoleActiveSpinSpeed = 30;
     [Header("Shadow")]
     public GameObject shadowPref;
     public GameObject planetHightlight;
