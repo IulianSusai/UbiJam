@@ -161,7 +161,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - {fileID: 8510222171831588337, guid: 7d209145249598943baf3785bf356575, type: 3}
-  - {fileID: 8510222171831588337, guid: 7d209145249598943baf3785bf356575, type: 3}
   - {fileID: 2934736688851479746, guid: 8dd8c472f1acc714eab6356c2129dc7c, type: 3}
   - {fileID: 2934736688851479746, guid: b6ebc6a8aaa6a1e44b9086d0b0ddaace, type: 3}
   - {fileID: 3651016205401905978, guid: 7837931a81506534286566ca9e9fd3dc, type: 3}
@@ -173,6 +172,8 @@ MonoBehaviour:
   - {fileID: 8510222171831588337, guid: b90b72f65d71ad145882a81819233fd2, type: 3}
   - {fileID: 8510222171831588337, guid: ed675e6173c1a804f85ed29c62c85dd4, type: 3}
   camShake: {fileID: 577446397}
+  blackHoleSpinSpeed: 0.5
+  blackHoleActiveSpinSpeed: 3
   shadowPref: {fileID: 3591793843826584732, guid: b37b844dff1894d33aa0b781c9e3e333,
     type: 3}
   planetHightlight: {fileID: 7145293471629214212, guid: 22b101de2fa114b3d85600a173fa7b25,
